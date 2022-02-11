@@ -1,0 +1,237 @@
+.logo{
+    padding: 50px;
+    position: fixed;
+}
+
+.logo{
+    z-index: 110;
+}
+
+.logo:hover{
+    transform:scale(1.8,1.8);
+    opacity: 0.8;
+    transition-duration: 1s;
+    opacity: 0.8;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+.topic{
+    text-align: center;
+    width: 700px;
+    font-size: 100px;
+}
+
+/* ハンバーガーメニュー */
+
+.material-icons{
+    font-size: 40px;
+    cursor: pointer;
+    position: fixed;
+    right: 45px;
+    top: 45px;
+    z-index: 110;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -120%;
+
+    background-color: black;
+    width: 30%;
+    height: 100%;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    z-index: 110;
+}
+
+.overlay.show{
+    opacity: 1;   
+    pointer-events: auto;
+    transition: opacity .6s;
+    z-index:　110;
+    left: 0;
+}
+
+.menu.nshow{
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.overlay ul{
+    list-style-type: none;
+    padding: 10%;
+}
+
+.overlay ul li{
+    padding-top: 50px;
+    font-size: 25px;
+    color: white;
+}
+
+.overlay ul li a{
+    color: white;
+}
+
+/* main */
+
+
+body{
+    text-align: center;
+    margin: 0%;
+}
+
+.member{
+    padding: 100px 300px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+.name{
+    font-size: 5vw;
+    padding: 5px;
+}
+
+h1{
+    font-size: 2vw;
+}
+
+p{
+    font-size: 1.5vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+.back{
+    text-decoration: none;
+    font-size: 60px;
+    padding: 110px;
+}
+
+.back a{
+    color: black;
+}
+
+/* takaya kurumi urara */
+
+.takaya, .kurumi, .urara{
+    text-align: left;
+    position: relative;
+}
+
+.takaya img, .kurumi img, .urara img{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.t-detail, .ku-detail, .u-detail{
+    position: absolute;
+    top: 100px;
+    left: 570px;
+}
+
+/* kazu yuya*/
+
+.kazu, .yuya{
+    text-align: right;
+    position: relative;
+}
+
+.kazu img, .yuya img{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.k-detail, .y-detail{
+    position: absolute;
+    top: 100px;
+    right: 570px;
+}
+
+/* Footer */
+
+.footer{
+    width: auto;
+    background-color: black;
+    color: white;
+    height: 300px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.f_text{
+    font-size: 25px;
+    height: 250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    /* text-align: center;  */
+}
+
+#fdawn_text, #fdawn_about{
+    width: 100px;
+    /* text-align: center; */
+    /* font-size: 50px; */
+}
+
+#fdawn_about a, #fdawn_text a{
+    color: white;
+}
+
+@media (min-width: 0px) and (max-width: 999px) {
+    .member{
+        display: inline;
+        padding: inherit;
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        right: inherit;
+    }
+    .member img{
+        position: inherit;
+    }
+    .t-detail,.k-detail,.ku-detail,.y-detail,.u-detail{
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        right: inherit;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+@media (min-width: 0px) and (max-width: 799px) {
+    h1{
+        font-size: 6vw;
+    }
+    .name{
+        font-size: 9vw;
+    }
+    p{
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 599px) {
+    .logo{
+        padding: 25px;
+        top: 0;
+    }.topic{
+        padding-top: 100px;
+    }
+    .back{
+        font-size: 4vw;
+    }
+}
