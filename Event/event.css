@@ -1,0 +1,487 @@
+.logo{
+    padding: 50px;
+    position: fixed;
+}
+
+.logo{
+    z-index: 110;
+}
+
+.logo img{
+    box-shadow: none;
+}
+
+.logo:hover{
+    transform:scale(1.8,1.8);
+    opacity: 0.8;
+    transition-duration: 1s;
+    opacity: 0.8;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+/* ハンバーガーメニュー */
+
+.material-icons{
+    font-size: 40px;
+    cursor: pointer;
+    position: fixed;
+    right: 45px;
+    top: 45px;
+    z-index: 110;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -120%;
+
+    background-color: black;
+    width: 30%;
+    height: 100%;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    z-index: 110;
+}
+
+.overlay.show{
+    opacity: 1;   
+    pointer-events: auto;
+    transition: opacity .6s;
+    z-index:　110;
+    left: 0;
+}
+
+.menu.nshow{
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.overlay ul{
+    list-style-type: none;
+    padding: 10%;
+    text-align: center;
+}
+
+.overlay ul li{
+    padding-top: 50px;
+    font-size: 25px;
+    color: white;
+}
+
+.overlay ul li a{
+    color: white;
+}
+
+/* 内容 */
+
+.body{
+    margin: 0%;
+    text-align: center;
+    width: 100%;
+}
+
+.topic{
+    text-align: center;
+    width: 600px;
+    font-size: 100px;
+}
+
+.event{
+    padding: 50px 25px;
+}
+
+.event img{
+    width: 30%;
+    max-height: 400px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    cursor: pointer;
+}
+
+.place{
+    margin: 5%;
+}
+
+/* osaka */
+
+.osaka, .hyogo{
+    position: relative;
+    text-align: right;
+    right: 100px;
+}
+
+.img-osaka{
+    transition: transform 1.0s;
+}
+
+.img-osaka.show{
+    transform: translateX(-110%);
+    transition: transform 1.0s;
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.img-osaka2{
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    transition: transform 1.0s;
+}
+
+.img-osaka2.show{
+    opacity: 0.5;
+    z-index: 50;
+    transition: transform 1.0s;
+    transform: translateX(-110%);
+    pointer-events: all;
+}
+
+.name-osaka, .name-hyogo{
+    position: absolute;
+    bottom: 0;
+    right: 35%;
+    font-size: 2vw;
+    z-index: 100;
+}
+
+.detail-osaka{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    left: 70%;
+    list-style: none;
+    text-align: left;
+    padding-top: 3%;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+    transition: opacity 1.0s;
+}
+
+.detail-osaka.show{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.0s;
+}
+
+.detail-osaka li{
+    padding-bottom: 30px;
+}
+
+
+/* kyoto */
+
+.kyoto, .online{
+    position: relative;
+    text-align: left;
+    /* padding-left: 150px; */
+    left: 15%;
+}
+
+.name-kyoto, .name-online{
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    font-size: 2vw;
+    z-index: 100;
+}
+
+.img-kyoto{
+    transition: transform 1.0s;
+}
+
+.img-kyoto.show{
+    transform: translateX(110%);
+    transition: transform 1.0s;
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.img-kyoto2{
+    position: absolute;
+    left: 0px;
+    /* opacity: 0; */
+    pointer-events: none;
+    transition: transform 1.0s;
+}
+
+.img-kyoto2.show{
+    opacity: 0.5;
+    z-index: 50;
+    transition: transform 1.0s;
+    transform: translateX(110%);
+    pointer-events: all;
+}
+
+.detail-kyoto{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 70%;
+    list-style: none;
+    text-align: right;
+    padding-top: 5%;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+    transition: opacity 1.0s;
+}
+
+.detail-kyoto.show{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.0s;
+}
+
+.detail-kyoto li{
+    padding-bottom: 30px;
+}
+
+/* Hyogo */
+
+.img-hyogo{
+    transition: transform 1.0s;
+}
+
+.img-hyogo.show{
+    transform: translateX(-110%);
+    transition: transform 1.0s;
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.img-hyogo2{
+    position: absolute;
+    right: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 1.0s;
+}
+
+.img-hyogo2.show{
+    opacity: 0.5;
+    z-index: 50;
+    transition: transform 1.0s;
+    transform: translateX(-110%);
+    pointer-events: all;
+}
+
+.detail-hyogo{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    left: 70%;
+    list-style: none;
+    padding-top: 3%;
+    text-align: left;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+    transition: opacity 1.0s;
+}
+
+.detail-hyogo.show{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.0s;
+}
+
+.detail-hyogo li{
+    padding-bottom: 30px;
+}
+
+/* online */
+
+.img-online{
+    transition: transform 1.0s;
+}
+
+.img-online.show{
+    transform: translateX(110%);
+    transition: transform 1.0s;
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.img-online2{
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 1.0s;
+}
+
+.img-online2.show{
+    opacity: 0.5;
+    z-index: 50;
+    transition: transform 1.0s;
+    transform: translateX(110%);
+    pointer-events: all;
+}
+
+.detail-online{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 70%;
+    list-style: none;
+    text-align: right;
+    padding-top: 5%;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+    transition: opacity 1.0s;
+}
+
+.detail-online.show{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1.0s;
+}
+
+.detail-online li{
+    padding-bottom: 30px;
+}
+
+.back, .info{
+    text-decoration: none;
+    font-size: 40px;
+    padding: 30px;
+    text-align: center;
+}
+
+.back a{
+    color: black;
+}
+
+
+
+/* Footer */
+
+.footer{
+    width: auto;
+    background-color: black;
+    color: white;
+    height: 300px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.f_text{
+    font-size: 25px;
+    height: 250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+
+}
+
+#fdawn_text, #fdawn_about{
+    width: 100px;
+}
+
+#fdawn_about a, #fdawn_text a{
+    color: white;
+}
+
+.footer p{
+    text-align: center;
+}
+
+/* スマホ */
+
+@media (min-width: 0px) and (max-width: 999px) {
+    body{
+        margin: 0;
+    }
+
+    .event{
+        text-align: center;
+        padding: 0;
+    }
+    .event img{
+        width: inherit;
+    }
+    .place{
+        display: inline;
+        margin: 0;
+    }
+    .img-osaka,.img-kyoto,.img-hyogo,.img-online{
+        padding-top: 50px;
+        box-shadow: inherit;
+        width: 100%;
+        height: 100%;
+        transition: inherit;
+    }
+    .img-osaka2,.img-kyoto2,.img-hyogo2,.img-online2{
+        display: none;
+    }
+    .osaka,.kyoto,.hyogo,.online{
+        position: inherit;
+    }
+    .name-osaka,.name-kyoto,.name-hyogo,.name-online{
+        position: inherit;
+        text-align: center;
+        font-size: 4vw;
+    }
+    .img-osaka.show,.img-kyoto.show,.img-hyogo,.show.img-online.show{
+        transform: inherit;
+        transition: inherit;
+        opacity: inherit;
+        pointer-events: inherit;
+    }
+    .detail-osaka,.detail-kyoto,.detail-hyogo,.detail-online{
+        opacity: inherit;
+        position: inherit;
+        text-align: center;
+        pointer-events: inherit;
+    }
+    .detail-osaka li a,.detail-kyoto li a,.detail-hyogo li a,.detail-online li a{
+        text-decoration: inherit;
+    }
+
+    .detail-osaka li,.detail-kyoto li,.detail-hyogo li,.detail-online li{
+        font-size: 5vw;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 599px) {
+    .logo{
+        padding: 25px;
+        top: 0;
+    }.topic{
+        padding-top: 100px;
+    }
+    .place img{
+        width: 100%;
+        height: 100%;
+    }
+    .back,.info{
+        font-size: 4vw;
+    }
+}
