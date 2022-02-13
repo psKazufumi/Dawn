@@ -93,6 +93,7 @@ body{
 
 h1{
     padding: 80px;
+    font-size: 4vw;
 }
 
 .contents{
@@ -141,7 +142,7 @@ a{
   
     background-attachment: fixed;
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
   }
 .img_bg_01{

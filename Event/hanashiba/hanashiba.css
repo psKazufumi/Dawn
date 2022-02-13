@@ -176,6 +176,10 @@ a{
     /* font-size: 50px; */
 }
 
+#fdawn{
+    padding: 0;
+}
+
 #fdawn_about a, #fdawn_text a{
     color: white;
 }
