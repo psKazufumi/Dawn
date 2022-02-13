@@ -251,6 +251,8 @@ a{
     .logo{
         padding: 25px;
         top: 0;
+        width: 80px; 
+        height: 70px;
     }.topic{
         padding-top: 100px;
     }
