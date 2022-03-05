@@ -21,8 +21,9 @@ header{
 
 .topic{
     text-align: center;
-    width: 750px;
+    width: 100%;
     font-size: 100px;
+    z-index: 50;
 }
 
 /* ハンバーガーメニュー */
@@ -86,14 +87,15 @@ header{
 body{
     text-align: center;
     margin: 0%;
-}
-
-.main{
-    padding-top: 80px;
+    color: black;
+    font-family: "游明朝", YuMincho,"メイリオ",Meiryo,serif,sans-serif;
 }
 
 h1{
-    padding: 80px;
+    font-size: 4vw;
+    padding: 40px;
+    padding-bottom: 10px;
+    text-decoration: underline;
 }
 
 .contents{
@@ -109,38 +111,73 @@ a{
     text-decoration: none;
 }
 
+.pc{
+    z-index: 50;
+}
+
 .smp{
     display: none;
+    z-index: 50;
+}
+
+.purpose{
+    padding-top: 30px;
 }
 
 /* パララックス　背景画像 */
 
-.parallax_box{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin: auto 0;
-}
-
-
-.parallax_content{
-    padding: 3%;
-    font-size: 100px;
-    top: 0;
-    bottom: 0;
-    font-weight: bold;
-    color: white;
-    font-family: 'Oooh Baby', cursive;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+.main2{
+    position: relative;
+    z-index: 1;
   }
-.img_bg_01{
-    background-image: url(gettyimages-688899881-1519413300.jpeg);
+  section{
+    height: 100%;
+    background: white;  
+  }
+  section#sec2{
+    height: 100%;
+    background: 0;
+    background-color: white;
+    padding-top: 30px;
+  }
+  section#sec2:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(gettyimages-688899881-1519413300.jpeg) no-repeat center / cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: block;
+  }
+  
+  
+  
+  body{
+    margin: 0; /* Codepen調整 */
+  }
+
+  .parallax_box{
+      /* padding-top: -50%; */
+      font-size: 6vw;
+      font-weight: bold;
+      color: white;
+  }
+
+  .sec1{
+      background-color: white;
+  }
+
+  .upper{
+      background-color: white;
+      padding-bottom: 40px;
+  }
+
+.message{
+    width: 80%;
+    margin: auto;
+    font-size: 7vw;
 }
 
 .back{
@@ -151,6 +188,7 @@ a{
 
 .back a{
     color: black;
+    font-size: 25px;
 }
 
 
@@ -202,13 +240,12 @@ a{
 
 @media (min-width: 0px) and (max-width: 449px) {
     h1{
-        padding: 0;
-        padding-bottom: 50px;
+        padding-top: 10;
+        padding-bottom: 10;
     }
     h2{
         padding: 0;
-        padding-bottom: 50px;
-        font-size: 5vw;
+        font-size: 4vw;
     }
     p{
         font-size: 2.5vw;
@@ -240,5 +277,8 @@ a{
     }
     .smp{
         display: initial !important;
+    }
+    .smp{
+        font-size: 0.8em;
     }
 }

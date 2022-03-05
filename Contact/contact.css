@@ -73,6 +73,7 @@
 
 body{
     margin: 0;
+    font-family: "游明朝", YuMincho,"メイリオ",Meiryo,serif,sans-serif;
 }
 
 header{
@@ -117,7 +118,7 @@ body{
 
 .back{
     text-decoration: none;
-    font-size: 40px;
+    font-size: 25px;
     padding: 110px;
 }
 
