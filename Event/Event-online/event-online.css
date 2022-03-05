@@ -21,7 +21,7 @@ header{
 
 .topic{
     text-align: center;
-    width: 750px;
+    background-color: white;
     font-size: 100px;
 }
 
@@ -85,10 +85,12 @@ header{
 body{
     text-align: center;
     margin: 0%;
+    font-family: "游明朝", YuMincho,"メイリオ",Meiryo,serif,sans-serif;
 }
 
 .main{
-    padding-top: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 h1{
@@ -110,9 +112,11 @@ a{
 
 .back{
     text-decoration: none;
-    font-size: 40px;
-    padding: 110px;
+    font-size: 25px;
+    padding-top: 110px;
+    padding-bottom: 110px;
 }
+
 
 .back a{
     color: black;
@@ -122,32 +126,43 @@ a{
 
 /* パララックス　背景画像 */
 
-.parallax_box{
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-.parallax_content p{
-    display: inline;
-}
-
-.parallax_content{
-    padding: 10%;
-    font-size: 6vw;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+.main{
+    position: relative;
+    z-index: 1;
   }
-.img_bg_01{
-    background-image: url(pexels-anna-shvets-4226140.jpg);
-}
+  section{
+    height: 100%;
+    background: white;  
+  }
+  section#sec2{
+    height: 100%;
+    background: 0;
+    background-color: white;
+  }
+  section#sec2:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(pexels-anna-shvets-4226140.jpg) no-repeat center / cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: block;
+  }
+  
+  
+  
+  body{
+    margin: 0; /* Codepen調整 */
+  }
+
+  .parallax_box{
+      /* padding-top: -50%; */
+      font-size: 6vw;
+      font-weight: bold;
+      color: white;
+  }
 
 
 /* body */
@@ -163,12 +178,10 @@ a{
 }
 
 .time p{
-    padding-bottom: 10px;
+    padding-bottom: 7px;
 }
 
-/* smart phone */
-
-.smp{ 
+.smp{
     display: none;
 }
 
@@ -220,11 +233,21 @@ a{
     transform: none;
 }
 
-@media (min-width: 0px) and (max-width: 899px) {
+/* @media (min-width: 0px) and (max-width: 899px) {
     .schedule{
         display: none !important;
     }
+} */
+
+@media (min-width: 0px) and (max-width: 949px) {
+    .schedule{
+        display: none;
+    }
+    .smp{
+        display: initial !important;
+    }
 }
+
 @media (min-width: 0px) and (max-width: 599px) {
     .logo{
         padding: 25px;

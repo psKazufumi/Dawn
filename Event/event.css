@@ -21,7 +21,9 @@
 header{
     display: flex;
     align-items: center;
+    width: 100%;
 }
+
 
 /* ハンバーガーメニュー */
 
@@ -81,15 +83,16 @@ header{
 
 /* 内容 */
 
-.body{
-    margin: 0%;
+body{
+    margin: 0;
     text-align: center;
     width: 100%;
+    font-family: "游明朝", YuMincho,"メイリオ",Meiryo,serif,sans-serif;
 }
 
 .topic{
     text-align: center;
-    width: 600px;
+    width: 650px;
     font-size: 100px;
 }
 
@@ -121,7 +124,8 @@ img{
 .osaka, .hyogo{
     position: relative;
     text-align: right;
-    right: 100px;
+    right: -100px;
+    max-width: 800px;
 }
 
 .img-osaka{
@@ -155,7 +159,7 @@ img{
     position: absolute;
     bottom: 0;
     right: 35%;
-    font-size: 2vw;
+    font-size: 1.5vw;
     z-index: 100;
 }
 
@@ -192,13 +196,15 @@ img{
     text-align: left;
     /* padding-left: 150px; */
     left: 15%;
+    width: 100%;
+    max-width: 800px;
 }
 
 .name-kyoto, .name-online{
     position: absolute;
     bottom: 0;
     left: 35%;
-    font-size: 2vw;
+    font-size: 1.5vw;
     z-index: 100;
 }
 
@@ -365,6 +371,12 @@ img{
     padding-bottom: 30px;
 }
 
+/* img smp */
+
+.img-osaka3,.img-kyoto3,.img-hyogo3,.img-online3{
+    display: none;
+}
+
 .back, .info{
     text-decoration: none;
     font-size: 40px;
@@ -374,6 +386,7 @@ img{
 
 .back a{
     color: black;
+    font-size: 25px
 }
 
 
@@ -430,13 +443,19 @@ img{
         display: inline;
         margin: 0;
     }
-    .img-osaka,.img-kyoto,.img-hyogo,.img-online{
+    .img-osaka3,.img-kyoto3,.img-hyogo3,.img-online3{
+        display: inherit;
         padding-top: 50px;
         box-shadow: inherit;
         width: 100%;
         height: 100%;
         transition: inherit;
     }
+
+    .img-osaka,.img-kyoto,.img-hyogo,.img-online{
+        display: none;
+    }
+
     .img-osaka2,.img-kyoto2,.img-hyogo2,.img-online2{
         display: none;
     }
@@ -448,7 +467,7 @@ img{
         text-align: center;
         font-size: 4vw;
     }
-    .img-osaka.show,.img-kyoto.show,.img-hyogo,.show.img-online.show{
+    .img-osaka.show,.img-kyoto.show,.img-hyogo.show,.show.img-online.show{
         transform: inherit;
         transition: inherit;
         opacity: inherit;
